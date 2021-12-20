@@ -1,3 +1,14 @@
-# Nebula的个人博客
+# 欢迎来到刘同学的秘密基地
 
-## 测试测试
+## 目录：
+
+- [git与npm代理设置方法](proxy)
+- [Node.js中module与exports](moduleandexports)
+
+
+
+## 关于：
+
+- 邮箱：admin@liuxinyumo.cn
+- 主页：http://www.liuinyumo.cn
+
