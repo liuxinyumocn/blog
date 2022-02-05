@@ -12,6 +12,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="22aKRwvsbMimcbw4sfIWCr4I8aB" />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="F:/Traffic_NN" />
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -42,7 +45,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
