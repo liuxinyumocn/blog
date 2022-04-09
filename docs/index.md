@@ -9,6 +9,7 @@
 - [基于Node.js的Github文章同步微信公众号实战（持续更新）](page2mp)
 - [异步编程风格笔记](async)
 - [CentOS7 LNPM安装与配置指引](lnpm)
+- [Flex弹性布局笔记](flex)
 
 
 
