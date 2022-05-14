@@ -10,6 +10,7 @@
 - [异步编程风格笔记](async.md)
 - [CentOS7 LNPM安装与配置指引](lnpm.md)
 - [Flex弹性布局笔记](flex.md)
+- [Linux(CentOS7)实用命令表](linux.md)
 
 
 
