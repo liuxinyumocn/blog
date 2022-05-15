@@ -174,6 +174,21 @@ mysql_secure_installation
 
 根据提示进行配置即可。
 
+允许root用户远程访问
+
+```shell
+mysql -uroot -p123456		#123456对应root用户的密码
+
+#下面 123456 改为对应的密码
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123456' WITH GRANT OPTION;
+
+#刷新
+FLUSH PRIVILEGES;
+
+#退出
+exit
+```
+
 
 
 # 端口检查
