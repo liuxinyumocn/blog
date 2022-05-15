@@ -11,6 +11,7 @@
 - [CentOS7 LNPM安装与配置指引](lnpm.md)
 - [Flex弹性布局笔记](flex.md)
 - [Linux(CentOS7)实用命令表](linux.md)
+- [Linux(CentOS7) PHP7 Oracle扩展安装pdo_oci.so oci8.so](linuxphporacle.md)
 
 
 
