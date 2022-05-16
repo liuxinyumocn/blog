@@ -60,3 +60,26 @@ firewall-cmd --list-all		//查看防火墙规则
 firewall-cmd --reload		//加载规则，新配置的需要 reload 才能生效
 firewall-cmd --add-port=3306/tcp --permanent	//开放 3306 端口
 ```
+
+
+
+## SSH用户安全配置
+
+配置Linux系统只允许特定用户进行远程登录
+
+```shell
+$ vim /etc/ssh/sshd_config
+
+#添加下面信息 仅允许 root administrator 两个用户远程访问
+AllowUsers root administrator
+
+#重启ssh
+$ service sshd restart
+```
+
+修改特定用户密码
+
+```sh
+$ passwd 用户名
+```
+
