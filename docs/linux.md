@@ -53,6 +53,62 @@ Tar解压
 tar -zxvf tarname.tar.gz	//解压到当前目录
 ```
 
+## 互传文件
+
+### 使用scp/rsync传输文件
+
+该命令将被弃用，但其语法类似cp命令因此还是可以用的
+
+如下命令在主机使用（非远程服务器），其中ip_address为远程服务器信息
+
+```sh
+$ scp username@ip_address:/home/username/filename .					#下载文件
+$ scp filename username@ip_address:/home/username/filename			#上传文件
+
+$ scp -r source_dir username@ip_address:/home/username/target_dir	#上传目录
+```
+
+该命令即将弃用可用 **rsync** 来替换
+
+```shell
+$ rsync username@ip_address:/home/username/filename .					#下载文件
+$ rsync filename username@ip_address:/home/username/filename			#上传文件
+
+$ rsync -r source_dir username@ip_address:/home/username/target_dir	#上传目录
+```
+
+### 使用sshfs构建远程目录实现文件传输
+
+主机安装sshfs，Windows我不知道，因为Windows推荐使用类似Filezilla传输工具更方便，该方法适合在两个Linux服务器上互传文件
+
+```shell
+$ yum install sshfs
+```
+
+创建一个专门的远程目录
+
+```shell
+$ mkdir mount_dir
+```
+
+挂载
+
+```shell
+$ sshfs username@IP_address:path_to_dir mount_dir
+```
+
+这样将文件复制到该目录或者从该目录拿出来就跟本地计算机一样了
+
+```shell
+$ cp local_file mount_dir
+```
+
+使用完一定要卸载
+
+```shell
+$ umount mount_dir
+```
+
 ## 防火墙firewall
 
 ```shell
