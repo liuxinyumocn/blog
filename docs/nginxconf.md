@@ -116,3 +116,10 @@ http {
 ```shell
 $ systemctl reload nginx
 ```
+
+另外记一次偶然的错误，如果发生 证书文件 提示无权限访问时，并检查并不是系统权限的问题，那很有可能是seLinux防火墙的问题，关闭指令：
+
+```shell
+$ setenforce 0
+```
+
