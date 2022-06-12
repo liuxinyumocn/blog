@@ -12,6 +12,7 @@
 ## 聊点技术：
 
 - [git与npm代理设置方法](proxy.md)
+- [git常用命令笔记](git/gitnote.md)
 - [基于Node.js的Github文章同步微信公众号实战（持续更新）](page2mp.md)
 - [CentOS7 LNPM安装与配置指引](lnpm.md)
 - [Linux(CentOS7)实用命令表](linux.md)
