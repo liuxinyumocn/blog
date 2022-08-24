@@ -167,4 +167,22 @@
 
 #### 5.justify-content
 
-​		justify-content用于指定item在主轴的对齐方式，item可沿主轴开始方向
+​		justify-content用于指定item在主轴的对齐方式，item可沿主轴：
+
+​	flex-start——开始方向对齐
+
+​	flex-end——结束方向对齐
+
+​	center——居中对齐
+
+​	space-between——两端对齐
+
+​	space-around——两侧对齐
+
+```css
+.container {
+    justify-content: flex-start;  //默认值
+}
+```
+
+<img src="image\flex_20220824-163946.png" />
