@@ -54,3 +54,5 @@ npm install eslint --save-dev
 npm install koa --save
 ```
 
+## 版本号规则
+
