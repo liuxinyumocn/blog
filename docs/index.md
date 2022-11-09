@@ -29,6 +29,12 @@
 
 
 
+## 忙碌一下午的刘师傅
+
+- [茄子炖土豆](makedinner/t01)
+
+
+
 ## 关于：
 
 - 邮箱：[admin@liuxinyumo.cn](admin@liuxinyumo.cn)
