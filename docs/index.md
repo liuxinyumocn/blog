@@ -31,7 +31,7 @@
 
 ## 忙碌一下午的刘师傅
 
-- [茄子炖土豆](makedinner/t01)
+- [茄子炖土豆](makedinner/t01.md)
 
 
 
