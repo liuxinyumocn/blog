@@ -4,7 +4,7 @@
 
 ```java
 private boolean safeEqual(String a,String b){
-	if(a == null || b == null){
+  if(a == null || b == null){
     return a == b;
   }
   if(a.length() != b.length()){		// ①
@@ -24,7 +24,7 @@ private boolean safeEqual(String a,String b){
 
 ```java
 private boolean safeEqual(String a,String b){
-	if(a == null || b == null){
+  if(a == null || b == null){
     return a == b;
   }
   if(a.length() != b.length()){
