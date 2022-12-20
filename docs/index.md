@@ -20,6 +20,7 @@
 - [Linux(CentOS7) PHP7 Oracle扩展安装pdo_oci.so oci8.so](linuxphporacle.md)
 - [Nginx Conf 参考配置](nginxconf.md)
 - [HTTPS是如何保障我们的通信安全的？](https.md)
+- [计时攻击](calTimeHack.md)
 
 
 
@@ -27,6 +28,12 @@
 
 - [通俗易懂讲明白什么是数字货币](ecash.md)
 - [浅谈一下增程式电车](oil2ecar.md)
+
+
+
+## 忙碌一下午的刘师傅
+
+- [茄子炖土豆](makedinner/t01.md)
 
 
 
