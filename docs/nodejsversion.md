@@ -7,7 +7,7 @@
 安装全局插件 n
 
 ```shell
-npm instlal -g n
+npm install -g n
 ```
 
 安装当前稳定版本
