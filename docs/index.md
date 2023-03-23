@@ -21,6 +21,7 @@
 - [Nginx Conf 参考配置](nginxconf.md)
 - [HTTPS是如何保障我们的通信安全的？](https.md)
 - [计时攻击](calTimeHack.md)
+- [使用gcc构建C语言编写的动态链接库](c/gccdll.md)
 
 
 
