@@ -54,5 +54,24 @@ npm install eslint --save-dev
 npm install koa --save
 ```
 
-## 版本号规则
+## LINK与UNLINK
+
+将本地项目包软链至项目工程中，比如自己开发了插件 my-plugin ，在 my-project 项目中使用，需要在 my-project 项目中调试 my-plugin 时，使用到该能力。
+
+```shell
+#进入到 my-plugin package.json 对应目录
+cd .../my-plugin
+#可以理解为复制粘贴中的“复制”
+npm link
+
+#前往 my-project package.json 对应目录
+cd .../my-project
+#link my-plugin package.json 中声明的插件名称（不是目录名字）
+npm link my-plugin
+
+#解除时先在 project 目录卸载 my-plugin 的软链
+npm unlink my-plugin
+#再回到 plugin 目录卸载全局软链
+npm unlink
+```
 
