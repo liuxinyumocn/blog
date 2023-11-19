@@ -16,14 +16,14 @@
 - [git与npm代理设置方法](proxy.md)
 - [git常用命令笔记](git/gitnote.md)
 - [基于Node.js的Github文章同步微信公众号实战（持续更新）](page2mp.md)
-- [CentOS7 LNPM安装与配置指引](lnpm.md)
-- [Linux(CentOS7)实用命令表](linux.md)
+- [Ubuntu LNPM安装与配置指引](lnpm.md)
+- [Linux实用命令表](linux.md)
 - [Linux(CentOS7) PHP7 Oracle扩展安装pdo_oci.so oci8.so](linuxphporacle.md)
 - [Nginx Conf 参考配置](nginxconf.md)
 - [HTTPS是如何保障我们的通信安全的？](https.md)
 - [计时攻击](calTimeHack.md)
 - [使用gcc构建C语言编写的动态链接库](c/gccdll.md)
-- [CentOS7 Java相关命令](java.md)
+- [Linux Java相关命令](java.md)
 - [远程Git pull笔记](pull.md)
 
 

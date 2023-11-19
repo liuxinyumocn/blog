@@ -1,4 +1,4 @@
-# Linux （CentOS7） 实用命令表
+# Linux 实用命令表
 
 ------------------------------------------
 
@@ -116,12 +116,26 @@ $ cp local_file mount_dir
 $ umount mount_dir
 ```
 
-## 防火墙firewall
+## CentOS 防火墙firewall
 
 ```shell
-firewall-cmd --list-all		//查看防火墙规则
-firewall-cmd --reload		//加载规则，新配置的需要 reload 才能生效
-firewall-cmd --add-port=3306/tcp --permanent	//开放 3306 端口
+firewall-cmd --list-all		# 查看防火墙规则
+firewall-cmd --reload		# 加载规则，新配置的需要 reload 才能生效
+firewall-cmd --add-port=3306/tcp --permanent	# 开放 3306 端口
+```
+
+## Ubuntu 防火墙
+
+```shell
+sudo ufw status
+sudo ufw enable
+sudo ufw disable
+sudo ufw allow <port>/<protocol> # sudo ufw allow 22/tcp
+sudo ufw deny <port>/<protocol> # 拒绝
+sudo ufw delete <rule> # 删除规则
+# 允许和拒绝某个IP
+sudo ufw allow from <ip_address>
+sudo ufw deny from <ip_address>
 ```
 
 
@@ -143,6 +157,19 @@ $ service sshd restart
 修改特定用户密码
 
 ```sh
-$ passwd 用户名
+sudo su
+passwd 用户名
 ```
 
+Ubuntu 允许root管理员远程登录
+```sh
+sudo vim /etc/ssh/sshd_config
+
+# 修改下面
+#PermitRootLogin prohibit-password
+# 为
+PermitRootLogin yes
+
+sudo systemctl restart ssh
+
+```

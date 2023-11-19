@@ -1,35 +1,32 @@
-# CentOS7 LNPM安装与配置指引
+# ubuntu LNPM安装与配置指引
 
 ## PHP7安装指引
 
 #### 安装：
 
-先配置PHP7 在centos7下的版本源
+更新包管理器
 
 ```sh
-yum install epel-release -y
-rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
-```
+sudo apt update
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:ondrej/php
+sudo apt install php7.2 php7.2-mysqli php7.2-pdo php7.2-curl
+sudo apt install php7.2-fpm
 
-清除centos7历史残留PHP版本
-
-```shell
-yum -y remove php*
-```
-
-下载安装
-
-```shell
-yum -y install php72w php72w-cli php72w-fpm php72w-common php72w-devel php72w-embedded php72w-gd php72w-mbstring php72w-mysqlnd php72w-opcache php72w-pdo php72w-xml
 ```
 
 #### 常用指令：
 
 ```shell
-systemctl enable php-fpm.service	#开机启动
-systemctl start php-fpm.service		#启动
+sudo systemctl start php7.2-fpm
+sudo systemctl enable php7.2-fpm
 ```
 
+```shell
+sudo vim /etc/php/7.2/fpm/pool.d/www.conf
+listen = 127.0.0.1:9000
+sudo systemctl restart php7.2-fpm
+```
 
 
 ## Nginx安装指引
@@ -37,7 +34,7 @@ systemctl start php-fpm.service		#启动
 #### 安装：
 
 ```shell
-yum install nginx
+sudo apt install nginx
 ```
 
 #### 常用指令：
@@ -153,7 +150,7 @@ systemctl stop nginx	#停止nginx
 #### 安装：
 
 ```sh
-yum -y install mariadb mariadb-server
+sudo apt install mariadb-server
 ```
 
 #### 常见指令：
@@ -169,7 +166,7 @@ systemctl stop mariadb		#停止
 新安装数据库需要进行初始化配置，在启动数据库后执行：
 
 ```sh
-mysql_secure_installation
+sudo mysql_secure_installation
 ```
 
 根据提示进行配置即可。
@@ -177,7 +174,18 @@ mysql_secure_installation
 允许root用户远程访问
 
 ```shell
-mysql -uroot -p123456		#123456对应root用户的密码
+# 设置密码（不使用套接字） your_password 之前设置的密码
+UPDATE mysql.user SET plugin = 'mysql_native_password', Password=PASSWORD('your_password') WHERE User='root' AND Host='localhost';
+
+FLUSH PRIVILEGES;
+
+# 允许所有IP访问
+vim /etc/mysql/mariadb.conf.d/50-server.cnf
+bind-address = 0.0.0.0
+sudo systemctl restart mysql
+
+
+mysql -u root -p 123456		#123456对应root用户的密码
 
 #下面 123456 改为对应的密码
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123456' WITH GRANT OPTION;
