@@ -2,6 +2,7 @@
 
 ## JavaScript专栏（前后端）
 
+- [Node.js安装(Ubuntu)](installNodejs.md)
 - [Node.js中module与exports](moduleandexports.md)
 - [Node.js中多进程](nodejs/childprocess.md)
 - [NPM笔记](npm.md)
