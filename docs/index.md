@@ -28,6 +28,7 @@
 - [Linux Java相关命令](java.md)
 - [远程Git pull笔记](pull.md)
 - [Docker 实用笔记](docker/index.md)
+- [MySQL 实用笔记](mysql.md)
 
 
 ## 乱七八糟：
