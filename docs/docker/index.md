@@ -90,3 +90,18 @@ b38367233d37: Pushed
 2aebd096e0e2: Pushed
 latest: digest: sha256:fe4277621f10b5026266932ddf760f5a756d2facd505a94d2da12f4f52f71f5a size: 1568
 ```
+
+配置非 https 推送权限
+
+编辑 `/etc/docker/daemon.json` MacOS 在 Docker Desktop 中配置
+```
+{
+  "registry-mirrors": [
+    "https://hub-mirror.c.163.com",
+    "https://mirror.baidubce.com"
+  ],
+  "insecure-registries": [
+    "192.168.199.100:5000"
+  ]
+}
+```
