@@ -22,6 +22,12 @@ rm -rf dir*		//删除 dir 目录及内部所有文件， -r 递归 -f 强制
 mv a b			//a 移动到 b
 ```
 
+软链
+```shell
+ln -s <source_file> <link_file>
+```
+
+
 查看文件夹大小
 
 ```shell
