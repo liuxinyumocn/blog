@@ -57,6 +57,77 @@ docker tag base-php7:latest nebulaliu/base-php7:latest
 docker push nebulaliu/base-php7:latest 
 ```
 
+## docker-compose 实用笔记
+
+### 安装
+
+```sh
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.2.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+sudo chmod +x /usr/local/bin/docker-compose
+
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+
+docker-compose version
+```
+
+设置开机启动服务
+创建配置文件：
+`/etc/systemd/system/docker-compose-app.service`
+```
+[Unit]
+Description=Docker Compose Application Service
+Requires=docker.service
+After=docker.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+WorkingDirectory=/data/docker-compose
+ExecStart=/usr/local/bin/docker-compose up -d
+ExecStop=/usr/local/bin/docker-compose down
+TimeoutStartSec=0
+
+[Install]
+WantedBy=multi-user.target
+```
+
+设置开机启动
+
+```sh
+sudo systemctl enable docker-compose-app.service
+sudo systemctl start docker-compose-app.service
+```
+
+### 编辑 yaml
+
+参考模板：
+```yaml
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: your_mysql_root_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - mysql
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/logs:/var/log/nginx
+```
+
 ## 私有仓库
 
 ### 创建
