@@ -10,8 +10,7 @@
 sudo apt update
 sudo apt install software-properties-common
 sudo add-apt-repository ppa:ondrej/php
-sudo apt install php7.2 php7.2-mysqli php7.2-pdo php7.2-curl php7.2-mbstring php7.2-gd
-sudo apt install php7.2-fpm
+sudo apt install php7.2 php7.2-mysqli php7.2-pdo php7.2-curl php7.2-mbstring php7.2-gd php7.2-cli php7.2-common php7.2-dev php7.2-embed php7.2-mysqlnd php7.2-opcache php7.2-fpm
 
 ```
 
