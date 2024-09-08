@@ -144,7 +144,11 @@ sudo ufw allow from <ip_address>
 sudo ufw deny from <ip_address>
 ```
 
+## 生成SSH
 
+```sh
+ssh-keygen -t rsa -C "这里换上你的邮箱"
+```
 
 ## SSH用户安全配置
 
