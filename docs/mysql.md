@@ -47,3 +47,21 @@ SELECT * FROM mytable;
 ```
 
 如果您看到正确的结果，则说明您已经成功将 CSV 数据导入到 MySQL 表中。
+
+## 批量导出数据表
+
+导出为SQL
+```sh
+mysqldump -u username -p database_name > xxx.sql
+```
+
+从SQL导入到库
+```sh
+mysql -u username -p database_name < xxx.sql
+```
+
+新的库需要创建后再导入
+
+```sh
+CREATE DATABASE `database_name`;
+```
