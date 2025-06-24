@@ -16,7 +16,7 @@ sudo ~/.acme.sh/acme.sh --set-default-ca --server letsencrypt
 
 一般ca路径生成都在 
 ```
-ssl_certificate "/root/.acme.sh/你的域名_ecc/你的域名.cer";
+ssl_certificate "/root/.acme.sh/你的域名_ecc/fullchain.cer";
 ssl_certificate_key "//root/.acme.sh/你的域名_ecc/你的域名.key";
 ```
 
